@@ -1,0 +1,20 @@
+?-  country(X, Y, Z).
+X = bangladesh,
+Y = india,
+Z = soudi.
+
+?- country(_, Y, Z).
+Y = india,
+Z = soudi.
+
+?- country(_, _, Z).
+Z = soudi.
+
+?- country(_, X, _).
+X = india.
+
+?- country(X, _, _).
+X = bangladesh.
+
+?- country(_, _, _).
+true.

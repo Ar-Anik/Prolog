@@ -1,0 +1,4 @@
+country(bangladesh, india, soudi).
+
+
+

@@ -1,0 +1,20 @@
+?- father(X, Y).
+X = abid,
+Y = prince ;
+X = abid,
+Y = riya ;
+
+?- listing(male).
+male(abid).
+male(prince).
+male(sopon).
+
+?- listing(parent).
+parent(abid, prince).
+parent(abid, riya).
+parent(riya, sopon).
+parent(riya, suma).
+
+?- listing(female).
+female(riya).
+female(suma).

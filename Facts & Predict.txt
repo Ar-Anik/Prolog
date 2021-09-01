@@ -1,0 +1,5 @@
+likes(X, Y).
+loves(X, Y).
+male(X).
+female(Y).
+
