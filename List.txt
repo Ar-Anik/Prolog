@@ -1,0 +1,53 @@
+?- X = [1, 2, 3, 4, 5].
+X = [1, 2, 3, 4, 5].
+
+?- X  = [red, white, black, yellow].
+X = [red, white, black, yellow].
+
+?- X = [nick, N, 10, nick].
+X = [nick, N, 10, nick].
+
+?- X = [].
+X = [].
+
+?- X = [nick, [michael, mary], [lucky, lucy]].
+X = [nick, [michael, mary], [lucky, lucy]].
+
+?- A is 7+3.
+A = 10.
+
+?- X = [[], adam, [2, [tom, tim]], [], A, [2, [tom, tim]], 7].
+X = [[], adam, [2, [tom, tim]], [], A, [2, [tom|...]], 7].
+
+?- [Head | Tail] = [red, white, black, yellow].
+Head = red,
+Tail = [white, black, yellow].
+
+?- [H1, H2|T]  = [red, white, black, yellow].
+H1 = red,
+H2 = white,
+T = [black, yellow].
+
+?- [H1, H2, H3, H4] = [red, white, black, yellow].
+H1 = red,
+H2 = white,
+H3 = black,
+H4 = yellow.
+
+?- [_, H|T] = [red, white, black, yellow, brown, green, pink].
+H = white,
+T = [black, yellow, brown, green, pink].
+
+[_, _, H|T] = [red, white, black, yellow, brown, green, pink].
+H = black,
+T = [yellow, brown, green, pink].
+
+ [_, _, H1, _, H2, _|_] = [red, white, black, yellow, brown, green, pink].
+H1 = black,
+H2 = brown.
+
+?- [_|T] = [red, white, black, yellow, brown, green, pink].
+T = [white, black, yellow, brown, green, pink].
+
+?- [H|_] = [red, white, black, yellow, brown, green, pink].
+H = red.
