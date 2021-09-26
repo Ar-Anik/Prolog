@@ -1,0 +1,11 @@
+?- member(anik, [ani, oni, boi, tuni, joni, fani]).
+false.
+
+?- member(anik, [ani, oni, boi, tuni, joni,anik, fani]).
+true ;
+false.
+
+?- member(1, [100, 200, 1, 4, 5, 6, 7, 1, 2, 5, 1]).
+true ;
+true ;
+true.

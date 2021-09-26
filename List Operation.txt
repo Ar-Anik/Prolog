@@ -1,0 +1,77 @@
+[H|T] = [a, b, c].
+H = a,
+T = [b, c].
+
+?- [H|T] = [a].
+H = a,
+T = [].
+
+?- [a|T] = [a, b, c].
+T = [b, c].
+
+?- [b|T] = [a, b, c].
+false.
+
+?- [H|T] = [a, d, z, c].
+H = a,
+T = [d, z, c].
+
+?- [H|T] = [apple, pear, grape].
+H = apple,
+T = [pear, grape].
+
+?- [A, pear|Rest] = [apple, pear, grape].
+A = apple,
+Rest = [grape].
+
+?- [A, B|Rest] = [apple, pear, grape].
+A = apple,
+B = pear,
+Rest = [grape].
+
+?- [a|Rest] = [apple, pear, grape].
+false.
+
+?- [a, []] = [A, B|Rest].
+A = a,
+B = Rest, Rest = [].
+
+?- [A, B|Rest] = [a, []].
+A = a,
+B = Rest, Rest = [].
+
+?- [two|[]] = [One].
+One = two.
+
+?- [One] = [two|[]].
+One = two.
+
+?- [Two] = [one].
+Two = one.
+
+?- [a, b, X] = [a, b, c, d].
+false.
+
+?- [a, b|X] = [A, B, c].
+X = [c],
+A = a,
+B = b.
+
+?- [a|[b, c]] = [a, b, c].
+true.
+
+?- [a, X] = [X, b].
+false.
+
+?- [a, b, X, c] = [A, B, Y].
+false.
+
+?- [H|T] = [[a, b], [c, d]].
+H = [a, b],
+T = [[c, d]].
+
+?- X = ['html', 'css',' js', 'c', 'c++', 'python'].
+X = [html, css, ' js', c, 'c++', python].
+
+?- X = ['prolog' | ['html', 'css',' js', 'c', 'c++', 'python']].
+X = [prolog, html, css, ' js', c, 'c++', python].
